@@ -14,7 +14,7 @@ RUN yum install -y zlib-devel openssl-devel sqlite-devel bzip2-devel wget ncurse
 					gcc gcc-c++.x86_64 compat-gcc-34-c++.x86_64 openssl-devel.x86_64 zlib*.x86_64 \
 					httpd mysql mysql-server mysql-devel
 
-# Python
+# Python 2.7
 RUN cd setup &&\
  	wget http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz &&\
 	unxz Python-2.7.6.tar.xz &&\
@@ -33,7 +33,6 @@ RUN cd /setup &&\
 RUN cd /setup &&\
 	wget --no-check-certificate https://raw.github.com/pypa/pip/master/contrib/get-pip.py &&\
 	python2.7 get-pip.py &&\
-	pip install virtualenv &&\
 	pip install flask
 
 # flocker
