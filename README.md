@@ -8,4 +8,4 @@ Run tests
 
 Run server
 
-`docker run flocker`
+`docker run -p 5000:5000 flocker`
